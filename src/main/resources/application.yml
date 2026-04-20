@@ -1,0 +1,29 @@
+server:
+  port: 8085
+  url: http://localhost:8085
+
+spring:
+  application:
+    name: age-detector
+  r2dbc:
+    url: r2dbc:postgresql://ep-rough-dream-a5jgv01u-pooler.us-east-2.aws.neon.tech/sql?sslmode=require
+    username: user
+    password: password
+
+rapidapi:
+  url: https://age-detector.p.rapidapi.com
+  host: age-detector.p.rapidapi.com
+  apikey: apikey
+
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG
+    org.springframework.web.reactive.function.client: DEBUG
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
